@@ -52,7 +52,7 @@ int op_percent(va_list vl)
 int _printf(const char *format, ...)
 {
 	va_list vl;
-	int i, j, len = 0;
+	int len = 0;
 	fun f_list[] = {
 		{"c", op_char},
 		{"s", op_string},
