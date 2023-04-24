@@ -3,7 +3,6 @@
 /**
  * op_char - prints characters
  * @vl: ...
- * 
 */
 void op_char(va_list vl)
 {
@@ -12,7 +11,6 @@ void op_char(va_list vl)
 /**
  * op_string - prints strings
  * @vl: ...
- * 
 */
 void op_string(va_list vl)
 {
@@ -29,7 +27,7 @@ void op_string(va_list vl)
  * op_percent - prints percentage
  *
 */
-void op_percent()
+void op_percent(void)
 {
 	_putchar('%');
 }
