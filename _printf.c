@@ -20,10 +20,10 @@ int op_string(va_list vl)
 {
 	int i = 0;
 	char *str = va_arg(vl, char *);
-	
+
 	if (!str)
 		str = "(null)";
-	
+
 	while (str[i])
 	{
 		_putchar(str[i]);
@@ -60,12 +60,11 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 		};
 
-	
 	if (!format)
 		return (-1);
-	
+
 	va_start(vl, format);
-	
+
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
