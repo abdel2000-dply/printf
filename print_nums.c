@@ -8,15 +8,14 @@
  */
 int op_int_helper(unsigned int n)
 {
-	int len = 0;
+    int len = 0;
 
-	if (n / 10)
-		len += op_int_helper(n / 10);
+    if (n / 10)
+        len += op_int_helper(n / 10);
 
-	_putchar((n % 10) + '0');
-	len++;
+    len += _putchar((n % 10) + '0');
 
-	return (len);
+    return (len);
 }
 
 /**
@@ -27,25 +26,19 @@ int op_int_helper(unsigned int n)
  */
 int op_int(va_list vl)
 {
-	int len = 0;
-	int n = va_arg(vl, int);
+    int len = 0;
+    int n = va_arg(vl, int);
     unsigned int t = n;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		len++;
-	}
+    if (n < 0)
+    {
+        len += _putchar('-');
+        t = -n;
+    }
 
-	if (n < 0)
-	{
-		_putchar('-');
-		t = -n;
-		len++;
-	}
+    if (t / 10 >= 0)
+        len += op_int_helper(t);
 
-	if (t / 10)
-		len += op_int_helper(t);
-
-	return (len);
+    return (len);
 }
+
