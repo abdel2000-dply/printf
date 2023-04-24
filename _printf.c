@@ -43,7 +43,6 @@ int _printf(const char *format, ...)
 	fun f_list[] = {
 		{"c", op_char},
 		{"s", op_string},
-		{"%", op_percent},
 		{NULL, NULL}
 		};
 
@@ -54,6 +53,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == '%')
+				_putchar('%');
 			while (f_list[j].fmt)
 			{
 				if (format[i] == f_list[j].fmt[0])
