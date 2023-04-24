@@ -5,7 +5,7 @@
  * @vl: ...
  *
  * Return: ...
-*/
+ */
 int op_char(va_list vl)
 {
 	_putchar(va_arg(vl, int));
@@ -15,7 +15,7 @@ int op_char(va_list vl)
  * op_string - prints strings
  * @vl: ...
  * Return: ...
-*/
+ */
 int op_string(va_list vl)
 {
 	int i = 0;
@@ -36,7 +36,7 @@ int op_string(va_list vl)
  * @vl: ...
  *
  * Return: ...
-*/
+ */
 int op_percent(va_list vl)
 {
 	(void) vl;
