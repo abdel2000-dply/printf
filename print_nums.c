@@ -5,8 +5,13 @@
  * @n: integer
  *
  * Return: the length of @n
+<<<<<<< HEAD
  */
 int op_int_helper(int n)
+=======
+*/
+int op_int_helper(long int n)
+>>>>>>> 96e86d2e20487568ddf6754ea88096cf559ef9af
 {
 	int len = 0;
 
@@ -27,6 +32,7 @@ int op_int_helper(int n)
  */
 int op_int(va_list vl)
 {
+<<<<<<< HEAD
 	int len = 0;
 	int n = va_arg(vl, int);
 
@@ -39,6 +45,26 @@ int op_int(va_list vl)
 
 	if (n / 10)
 		len += op_int_helper(n);
+=======
+    int len = 0;
+    long int n = va_arg(vl, int);
+
+    if (n == 0)
+    {
+        _putchar('0');
+        len++;
+    }
+        
+    if (n < 0)
+    {
+        _putchar('-');
+        n = -n;
+        len++;
+    }
+
+    if (t / 10)
+        len += op_int_helper(n);
+>>>>>>> 96e86d2e20487568ddf6754ea88096cf559ef9af
 
 	return (len);
 }
