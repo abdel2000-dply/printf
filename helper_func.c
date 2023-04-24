@@ -15,10 +15,12 @@ int helper_func(const char *format, va_list vl, fun *f_list)
 	{
 		if (format[i] == '%')
 		{
-			i++;
+			if (format[i + 1] == '\0')
+				return (-1);
+
 			for (j = 0; f_list[j].fmt; j++)
 			{
-				if (format[i] == f_list[j].fmt[0])
+				if (format[i + 1] == f_list[j].fmt[0])
 				{
 					len += f_list[j].fo_fun(vl);
 					break;
@@ -26,8 +28,8 @@ int helper_func(const char *format, va_list vl, fun *f_list)
 			}
 			if (!f_list[j].fmt)
 			{
-				_putchar(format[i - 1]);
 				_putchar(format[i]);
+				_putchar(format[i + 1]);
 				len += 2;
 			}
 		}
