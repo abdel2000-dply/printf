@@ -20,4 +20,8 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int helper_func(const char *format, va_list vl, fun *f_list);
 
+int op_char(va_list vl);
+int op_string(va_list vl);
+int op_percent(va_list vl);
+
 #endif /* MAIN_H */
