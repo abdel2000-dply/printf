@@ -18,5 +18,6 @@ typedef struct func
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int helper_func(const char *format, va_list vl, fun *f_list);
 
 #endif /* MAIN_H */
