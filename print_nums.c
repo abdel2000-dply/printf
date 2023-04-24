@@ -6,7 +6,7 @@
  *
  * Return: the length of @n
  */
-int op_int_helper(long int n)
+int op_int_helper(unsigned int n)
 {
 	int len = 0;
 
@@ -28,7 +28,8 @@ int op_int_helper(long int n)
 int op_int(va_list vl)
 {
 	int len = 0;
-	long int n = va_arg(vl, int);
+	int n = va_arg(vl, int);
+    unsigned int t = n;
 
 	if (n == 0)
 	{
@@ -39,12 +40,12 @@ int op_int(va_list vl)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		t = -n;
 		len++;
 	}
 
-	if (n / 10)
-		len += op_int_helper(n);
+	if (t / 10)
+		len += op_int_helper(t);
 
 	return (len);
 }
