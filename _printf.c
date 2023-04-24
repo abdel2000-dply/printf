@@ -3,16 +3,20 @@
 /**
  * op_char - prints characters
  * @vl: ...
+ *
+ * Return: ...
 */
-void op_char(va_list vl)
+int op_char(va_list vl)
 {
 	_putchar(va_arg(vl, int));
+	return (-1);
 }
 /**
  * op_string - prints strings
  * @vl: ...
+ * Return: ...
 */
-void op_string(va_list vl)
+int op_string(va_list vl)
 {
 	int i = 0;
 	char *str = va_arg(vl, char *);
@@ -22,14 +26,20 @@ void op_string(va_list vl)
 		_putchar(str[i]);
 		i++;
 	}
+	return (i - 2);
 }
 /**
  * op_percent - prints percentage
+ * @vl: ...
  *
+ * Return: ...
 */
-void op_percent(void)
+int op_percent(va_list vl)
 {
+	(void) vl;
+
 	_putchar('%');
+	return (-1);
 }
 /**
  * _printf - produces output according to a format
@@ -39,10 +49,11 @@ void op_percent(void)
 int _printf(const char *format, ...)
 {
 	va_list vl;
-	int i = 0, j = 0;
+	int i = 0, j = 0, len = 0;
 	fun f_list[] = {
 		{"c", op_char},
 		{"s", op_string},
+		{"%", op_percent},
 		{NULL, NULL}
 		};
 
@@ -53,13 +64,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '%')
-				_putchar('%');
 			while (f_list[j].fmt)
 			{
 				if (format[i] == f_list[j].fmt[0])
 				{
-					f_list[j].fo_fun(vl);
+					len = f_list[j].fo_fun(vl);
 					break;
 				}
 				j++;
@@ -69,5 +78,5 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 		i++;
 	}
-	return (i);
+	return (i + len);
 }

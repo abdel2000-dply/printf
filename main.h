@@ -11,7 +11,7 @@
 typedef struct func
 {
 	char *fmt;
-	void (*fo_fun)(va_list);
+	int (*fo_fun)(va_list);
 
 } fun;
 
