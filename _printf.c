@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{"x", op_hex},
 		{"X", op_heX},
 		{"u", op_uint},
+		{"S", op_nptbl},
 		{NULL, NULL}
 		};
 
