@@ -15,7 +15,7 @@ int helper_func(const char *format, va_list vl, fun *f_list)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0')
+			if (format[i] == '\0' || (format[i] == ' ' && format[i + 1] == ' '))
 				return (-1);
 			flag = flag_checker(format[i]);
 			if (flag != 0)
