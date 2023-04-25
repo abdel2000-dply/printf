@@ -7,10 +7,10 @@
  */
 int op_add(va_list vl, int flag)
 {
-	(void) flag;
 	int i = 0;
 	void *ptr = va_arg(vl, void *);
 	unsigned long add = (unsigned long)ptr;
+	(void) flag;
 
 	if (!ptr)
 		return (_printf("(nil)"));

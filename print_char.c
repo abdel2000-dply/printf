@@ -23,9 +23,9 @@ int op_char(va_list vl, int flag)
  */
 int op_string(va_list vl, int flag)
 {
-	(void) flag;
 	int i = 0;
 	char *str = va_arg(vl, char *);
+	(void) flag;
 
 	if (!str)
 		str = "(null)";
@@ -44,8 +44,8 @@ int op_string(va_list vl, int flag)
  */
 int op_percent(va_list vl, int flag)
 {
-	(void)flag;
 	(void) vl;
+	(void)flag;
 
 	_putchar('%');
 	return (1);

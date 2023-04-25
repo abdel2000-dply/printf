@@ -52,8 +52,8 @@ int op_int(va_list vl, int flag)
  */
 int op_uint(va_list vl, int flag)
 {
-	(void) flag;
 	long int n = va_arg(vl, unsigned int);
+	(void) flag;
 
 	return (op_int_helper(n));
 }

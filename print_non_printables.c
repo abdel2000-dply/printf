@@ -8,9 +8,9 @@
  */
 int op_nptbl(va_list vl, int flag)
 {
-	(void) flag;
 	int i = 0, len = 0;
 	char *str = va_arg(vl, char *);
+	(void) flag;
 
 	if (!str)
 		str = "(null)";
