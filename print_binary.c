@@ -21,6 +21,7 @@ int op_binary_helper(long int n)
 /**
  * op_binary - prints num on binary base
  * @vl: varasic list of arguments
+ * @flag: flag
  *
  * Return: the length of the argument
  */
