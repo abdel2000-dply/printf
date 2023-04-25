@@ -31,6 +31,9 @@ int op_binary(va_list vl);
 int op_octal(va_list vl);
 int op_hex(va_list vl);
 int op_heX(va_list vl);
+int convert_base(unsigned int n, int base, char c);
+
+int op_nptbl(va_list vl);
 
 
 
