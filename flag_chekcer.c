@@ -16,6 +16,10 @@ int flag_checker(char fmt)
 			return (2);
 		case '#':
 			return (3);
+		case 'l':
+			return (4);
+		case 'h':
+			return (5);
 		default:
 			return (0);
 	}
