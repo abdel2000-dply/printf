@@ -27,7 +27,7 @@ int op_binary_helper(long int n)
 int op_binary(va_list vl)
 {
         int len = 0;
-        long int n = va_arg(vl, int);
+        long int n = va_arg(vl, unsigned int);
 
         if (n / 2 >= 0)
                 len += op_binary_helper(n);
