@@ -6,8 +6,10 @@
  *
  * Return: length
  */
-int op_char(va_list vl)
+int op_char(va_list vl, int flag)
 {
+	(void) flag;
+
 	_putchar(va_arg(vl, int));
 	return (1);
 }
@@ -16,8 +18,9 @@ int op_char(va_list vl)
  * @vl: input
  * Return: length
  */
-int op_string(va_list vl)
+int op_string(va_list vl, int flag)
 {
+	(void) flag;
 	int i = 0;
 	char *str = va_arg(vl, char *);
 
@@ -35,8 +38,9 @@ int op_string(va_list vl)
  *
  * Return: length
  */
-int op_percent(va_list vl)
+int op_percent(va_list vl, int flag)
 {
+	(void)flag;
 	(void) vl;
 
 	_putchar('%');
