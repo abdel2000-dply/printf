@@ -25,10 +25,8 @@ int op_string(va_list vl)
 		str = "(null)";
 
 	while (str[i])
-	{
-		_putchar(str[i]);
-		i++;
-	}
+		i += _putchar(str[i]);
+		
 	return (i);
 }
 /**
