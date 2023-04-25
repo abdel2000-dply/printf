@@ -29,11 +29,15 @@ int convert_base(unsigned long n, int base, char c)
  *
  * Return: the length of the argument
  */
-int op_octal(va_list vl)
+int op_octal(va_list vl, int flag)
 {
+	int len = 0;
 	long int n = va_arg(vl, unsigned int);
 
-	return (convert_base(n, 8, '0'));
+	if (flag == 3)
+		len += _putchar('0');
+
+	return (len + convert_base(n, 8, '0'));
 }
 
 /**
@@ -42,11 +46,15 @@ int op_octal(va_list vl)
  *
  * Return: the length of the argument
  */
-int op_hex(va_list vl)
+int op_hex(va_list vl, int flag)
 {
+	int len = 0;
 	long int n = va_arg(vl, unsigned int);
 
-	return (convert_base(n, 16, 87));
+	if (flag == 3)
+		len += _printf("0x");
+
+	return (len + convert_base(n, 16, 87));
 }
 
 /**
@@ -55,9 +63,13 @@ int op_hex(va_list vl)
  *
  * Return: the length of the argument
  */
-int op_heX(va_list vl)
+int op_heX(va_list vl, int flag)
 {
+	int len = 0;
 	long int n = va_arg(vl, unsigned int);
 
-	return (convert_base(n, 16, 55));
+	if (flag == 3)
+		len += _printf("0X");
+
+	return (len + convert_base(n, 16, 55));
 }
