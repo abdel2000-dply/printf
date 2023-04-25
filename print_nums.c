@@ -21,6 +21,7 @@ int op_int_helper(long int n)
 /**
  * op_int - prints an integer
  * @vl: varasic list of arguments
+ * @flag: flag
  *
  * Return: the length of the printed chars
  */
@@ -45,6 +46,7 @@ int op_int(va_list vl, int flag)
 /**
  * op_uint - prints an unsigned integer
  * @vl: varasic list of arguments
+ * @flag: flag
  *
  * Return: the length of the printed chars
  */
