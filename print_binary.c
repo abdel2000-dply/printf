@@ -24,8 +24,9 @@ int op_binary_helper(long int n)
  *
  * Return: the length of the argument
  */
-int op_binary(va_list vl)
+int op_binary(va_list vl, int flag)
 {
+	(void) flag;
 	int len = 0;
 	long int n = va_arg(vl, unsigned int);
 
