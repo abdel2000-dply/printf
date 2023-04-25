@@ -57,7 +57,7 @@ int op_hex(va_list vl, int flag)
 	int len = 0;
 	long int n = va_arg(vl, long int);
 	short x;
-	
+
 	if (flag == 5)
 		x = n, n = x;
 
@@ -79,7 +79,7 @@ int op_heX(va_list vl, int flag)
 	int len = 0;
 	long int n = va_arg(vl, long int);
 	short x;
-	
+
 	if (flag == 5)
 		x = n, n = x;
 
