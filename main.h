@@ -26,5 +26,7 @@ int op_percent(va_list vl);
 
 int op_int(va_list vl);
 
+int op_binary(va_list vl);
+
 
 #endif /* MAIN_H */
