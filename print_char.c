@@ -2,9 +2,9 @@
 
 /**
  * op_char - prints characters
- * @vl: ...
+ * @vl: input
  *
- * Return: ...
+ * Return: length
  */
 int op_char(va_list vl)
 {
@@ -13,8 +13,8 @@ int op_char(va_list vl)
 }
 /**
  * op_string - prints strings
- * @vl: ...
- * Return: ...
+ * @vl: input
+ * Return: length
  */
 int op_string(va_list vl)
 {
@@ -31,9 +31,9 @@ int op_string(va_list vl)
 }
 /**
  * op_percent - prints percentage
- * @vl: ...
+ * @vl: input
  *
- * Return: ...
+ * Return: length
  */
 int op_percent(va_list vl)
 {
