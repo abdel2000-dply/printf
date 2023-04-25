@@ -13,8 +13,7 @@ int op_nptbl(va_list vl, int flag)
 	(void) flag;
 
 	if (!str)
-		str = "(null)";
-
+		return (_printf("(null)"));
 	while (str[i])
 	{
 		if ((0 < str[i] && str[i] < 32) || 127 <= str[i])
