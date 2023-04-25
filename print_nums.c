@@ -24,11 +24,15 @@ int op_int_helper(long int n)
  *
  * Return: the length of the printed chars
  */
-int op_int(va_list vl)
+int op_int(va_list vl, int flag)
 {
 	int len = 0;
 	long int n = va_arg(vl, int);
 
+	if (flag == 1 && n > 0)
+		len += _putchar('+');
+	if (flag == 2 && n > 0)
+		len += _putchar(' ');
 	if (n < 0)
 	{
 		len += _putchar('-');
@@ -44,8 +48,9 @@ int op_int(va_list vl)
  *
  * Return: the length of the printed chars
  */
-int op_uint(va_list vl)
+int op_uint(va_list vl, int flag)
 {
+	(void) flag;
 	long int n = va_arg(vl, unsigned int);
 
 	return (op_int_helper(n));
