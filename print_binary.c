@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * op_int_helper - prints 
+ * op_binary_helper - prints prints num on binary base
  * @n: integer
  *
  * Return: the length of @n
@@ -19,7 +19,7 @@ int op_binary_helper(long int n)
 }
 
 /**
- * op_int - prints 
+ * op_binary - prints num on binary base
  * @vl: varasic list of arguments
  *
  * Return: the length of the argument
