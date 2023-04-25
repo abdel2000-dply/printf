@@ -5,7 +5,6 @@
  * @n: number to convert
  * @base: base to use
  * @c: char
- * @flag: flag
  *
  * Return: the length of the printed number
  */
