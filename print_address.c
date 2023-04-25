@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * op_add - prints a pointer's address
- * @vl: ...
- * Return: ...
+ * @vl: input
+ * Return: the length
  */
 int op_add(va_list vl)
 {

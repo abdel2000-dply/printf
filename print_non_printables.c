@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * op_nptbl - prints non printable chars in a string
- * @vl: ...
- * Return: ...
+ * @vl: input
+ * Return: 
  */
 int op_nptbl(va_list vl)
 {
