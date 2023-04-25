@@ -22,7 +22,7 @@ int op_int_helper(long int n)
  * op_int - prints an integer
  * @vl: varasic list of arguments
  *
- * Return: the length of the argument
+ * Return: the length of the printed chars
  */
 int op_int(va_list vl)
 {
@@ -35,8 +35,20 @@ int op_int(va_list vl)
 		n = -n;
 	}
 
-	if (n / 10 >= 0)
-		len += op_int_helper(n);
-
-	return (len);
+	return (len + op_int_helper(n));
 }
+
+/**
+ * op_uint - prints an unsigned integer
+ * @vl: varasic list of arguments
+ *
+ * Return: the length of the printed chars
+ */
+int op_uint(va_list vl)
+{
+	long int n = va_arg(vl, unsigned int);
+
+	return (op_int_helper(n));
+}
+
+
