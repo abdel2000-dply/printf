@@ -4,7 +4,6 @@
  * @format: ...
  * @vl: ...
  * @f_list: ...
- *
  * Return: ...
  */
 int helper_func(const char *format, va_list vl, fun *f_list)
@@ -48,7 +47,6 @@ int helper_func(const char *format, va_list vl, fun *f_list)
 		}
 		else
 			len += _putchar(format[i]);
-
 	}
 	return (len);
 }
