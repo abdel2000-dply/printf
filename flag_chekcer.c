@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
+ * flag_checker - checking for the flag
+ * @fmt: format
  * 
+ * Return: ...
 */
 int flag_checker(char fmt)
 {
