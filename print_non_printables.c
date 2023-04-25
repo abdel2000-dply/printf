@@ -14,7 +14,7 @@ int op_nptbl(va_list vl)
 
 	while (str[i])
 	{
-		if (0 < str[i] && str[i] < 32 || 127 <= str[i])
+		if ((0 < str[i] && str[i] < 32) || 127 <= str[i])
 		{
 			len += (str[i] < 16) ? _printf("\\x0") : _printf("\\x");
 			len += convert_base(str[i], 16, 55);
