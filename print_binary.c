@@ -26,11 +26,11 @@ int op_binary_helper(long int n)
  */
 int op_binary(va_list vl)
 {
-        int len = 0;
-        long int n = va_arg(vl, int);
+	int len = 0;
+	long int n = va_arg(vl, int);
 
-        if (n / 2 >= 0)
-                len += op_binary_helper(n);
+	if (n / 2 >= 0)
+		len += op_binary_helper(n);
 
 	return (len);
 }
