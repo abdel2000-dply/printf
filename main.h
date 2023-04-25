@@ -25,8 +25,13 @@ int op_string(va_list vl);
 int op_percent(va_list vl);
 
 int op_int(va_list vl);
+int op_uint(va_list vl);
 
 int op_binary(va_list vl);
+int op_octal(va_list vl);
+int op_hex(va_list vl);
+int op_heX(va_list vl);
+
 
 
 #endif /* MAIN_H */
