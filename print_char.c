@@ -26,7 +26,7 @@ int op_string(va_list vl)
 
 	while (str[i])
 		i += _putchar(str[i]);
-		
+
 	return (i);
 }
 /**

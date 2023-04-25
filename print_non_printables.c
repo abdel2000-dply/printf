@@ -13,19 +13,19 @@ int op_nptbl(va_list vl)
 		str = "(null)";
 
 	while (str[i])
-    {
-        if (0 < str[i] && str[i] < 32 || 127 <= str[i])
+	{
+		if (0 < str[i] && str[i] < 32 || 127 <= str[i])
 		{
-            len += (str[i] < 16) ? _printf("\\x0") : _printf("\\x");
+			len += (str[i] < 16) ? _printf("\\x0") : _printf("\\x");
 			len += convert_base(str[i], 16, 55);
-            i++;
+			i++;
 		}
-        if (!str[i])
-		    return (len);
+		if (!str[i])
+			return (len);
 
-            len += _putchar(str[i]);
-        i++;
-    }
+		len += _putchar(str[i]);
+		i++;
+	}
 
 	return (len);
 }
