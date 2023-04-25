@@ -8,7 +8,7 @@
  *
  * Return: the length of the printed number
  */
-int convert_base(unsigned int n, int base, char c)
+int convert_base(unsigned long n, int base, char c)
 {
 	int len = 0;
 
