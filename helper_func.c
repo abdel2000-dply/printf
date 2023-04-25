@@ -9,7 +9,7 @@
  */
 int helper_func(const char *format, va_list vl, fun *f_list)
 {
-	int i, j, len = 0, flag;
+	int i, j, len = 0, flag, flag2;
 
 	for (i = 0; format[i]; i++)
 	{
@@ -20,8 +20,17 @@ int helper_func(const char *format, va_list vl, fun *f_list)
 				return (-1);
 			flag = flag_checker(format[i]);
 			if (flag != 0)
+			{
 				i++;
-
+				flag2 = flag_checker(format[i]);
+				if (flag == 2 && flag2 == 1)
+				{
+					flag = flag2;
+					i++;
+				}
+				else if (flag2 != 0)
+					i++;
+			}
 			for (j = 0; f_list[j].fmt; j++)
 			{
 				if (format[i] == f_list[j].fmt[0])
