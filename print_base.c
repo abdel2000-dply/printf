@@ -5,6 +5,7 @@
  * @n: number to convert
  * @base: base to use
  * @c: char
+ * @flag: flag
  *
  * Return: the length of the printed number
  */
@@ -26,6 +27,7 @@ int convert_base(unsigned long n, int base, char c)
 /**
  * op_octal - prints num in octal base
  * @vl: varasic list of arguments
+ * @flag: flag
  *
  * Return: the length of the argument
  */
@@ -43,6 +45,7 @@ int op_octal(va_list vl, int flag)
 /**
  * op_hex - prints num in hex base, with lower cases
  * @vl: varasic list of arguments
+ * @flag: flag
  *
  * Return: the length of the argument
  */
@@ -60,6 +63,7 @@ int op_hex(va_list vl, int flag)
 /**
  * op_heX - prints num in hex base, with upper cases
  * @vl: varasic list of arguments
+ * @flag: flag
  *
  * Return: the length of the argument
  */
