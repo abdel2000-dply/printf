@@ -13,7 +13,7 @@ int op_add(va_list vl)
 	if (!ptr)
 		return (_printf("(nil)"));
 
-	i += _printf("x0");
+	i += _printf("0x");
 	i += convert_base(add, 16, 87);
 
 	return (i);
