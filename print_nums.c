@@ -30,12 +30,6 @@ int op_int(va_list vl)
 	int len = 0;
 	long int n = va_arg(vl, int);
 
-	if (n == 0)
-	{
-		_putchar('0');
-		len++;
-	}
-
 	if (n < 0)
 	{
 		_putchar('-');
