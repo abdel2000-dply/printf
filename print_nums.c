@@ -13,8 +13,7 @@ int op_int_helper(long int n)
 	if (n / 10)
 		len += op_int_helper(n / 10);
 
-	_putchar((n % 10) + '0');
-	len++;
+	len += _putchar((n % 10) + '0');
 
 	return (len);
 }
@@ -32,9 +31,8 @@ int op_int(va_list vl)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		len += _putchar('-');
 		n = -n;
-		len++;
 	}
 
 	if (n / 10 >= 0)
