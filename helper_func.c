@@ -23,9 +23,7 @@ int helper_func(const char *format, va_list vl, fun *f_list)
 				i++;
 				flag2 = flag_checker(format[i]);
 				if (flag == 2 && flag2 == 1)
-				{
 					flag = flag2, i++;
-				}
 				else if (flag2 != 0)
 					i++;
 			}
@@ -38,11 +36,7 @@ int helper_func(const char *format, va_list vl, fun *f_list)
 				}
 			}
 			if (!f_list[j].fmt)
-			{
-				_putchar(format[i - 1]);
-				_putchar(format[i]);
-				len += 2;
-			}
+				len += _printf("%c%c", format[i - 1], format[i]);
 		}
 		else
 			len += _putchar(format[i]);
