@@ -36,7 +36,7 @@ int op_int(va_list vl)
 		t = -n;
 	}
 
-	if (n / 10 >= 0)
+	if (n / 10 > 0)
 		len += op_int_helper(t);
 
 	return (len);
