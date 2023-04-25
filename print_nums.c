@@ -28,7 +28,11 @@ int op_int_helper(long int n)
 int op_int(va_list vl, int flag)
 {
 	int len = 0;
-	long int n = va_arg(vl, int);
+	long int n = va_arg(vl, long int);
+	short x;
+
+	if (flag == 5)
+		x = n, n = x;
 
 	if (flag == 1 && n > 0)
 		len += _putchar('+');
@@ -52,8 +56,11 @@ int op_int(va_list vl, int flag)
  */
 int op_uint(va_list vl, int flag)
 {
-	long int n = va_arg(vl, unsigned int);
-	(void) flag;
+	long int n = va_arg(vl, long int);
+	short x;
+
+	if (flag == 5)
+		x = n, n = x;
 
 	return (op_int_helper(n));
 }
