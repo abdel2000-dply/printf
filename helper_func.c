@@ -22,7 +22,7 @@ int helper_func(const char *format, va_list vl, fun *f_list)
 			{
 				i++;
 				flag2 = flag_checker(format[i]);
-				if (flag == 2 && flag2 == 1)
+				if (flag == 2 && flag2 != 0)
 					flag = flag2, i++;
 				else if (flag2 != 0)
 					i++;
