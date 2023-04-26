@@ -31,5 +31,5 @@ int op_rot13(va_list vl, int flag)
 		}
 
 	}
-	return (len);
+	return (len - 1);
 }
