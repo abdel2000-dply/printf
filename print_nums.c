@@ -4,7 +4,7 @@
  * op_int_helper - prints a number
  * @n: integer
  *
- * Return: the length of @n
+ * Return: length of @n
  */
 int op_int_helper(long int n)
 {
