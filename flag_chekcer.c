@@ -2,7 +2,7 @@
 
 /**
  * flag_checker - checking for the flag
- * @fmt: format
+ * @fmt: format ...
  *
  * Return: ...
  */
