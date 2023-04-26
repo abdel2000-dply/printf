@@ -4,7 +4,7 @@
  * @vl: input
  * @flag: flag
  *
- * Return: ...
+ * Return: length
  */
 int op_nptbl(va_list vl, int flag)
 {
