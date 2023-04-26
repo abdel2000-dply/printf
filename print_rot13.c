@@ -9,26 +9,26 @@
  */
 int op_rot13(va_list vl, int flag)
 {
-	int i = 0, j, len = 0;
-	char *s = va_arg(vl, char *);
-	char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	(void) flag;
+    int i, j;
+    char *s = va_arg(vl, char *);
+    char s1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    char s2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+    (void)flag;
 
     if (s == NULL)
-		s = "(AHYY)";
+        s = "(AHYY)";
 
-	for (; s[i]; i++)
-	{
-		for (j = 0; alph[j]; j++)
-		{
-			if (s[i] == alph[j])
-			{
-				len += _putchar(rot13[j]);
-				break;
-			}
-		}
+    for (i = 0; s[i]; i++)
+    {
+        for (j = 0; s1[j]; j++)
+        {
+            if (s[i] == s1[j])
+            {
+                _putchar(s2[j]);
+                break;
+            }
+        }
+    }
 
-	}
-	return (len);
+    return (i);
 }
