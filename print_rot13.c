@@ -27,8 +27,8 @@ int op_rot13(va_list vl, int flag)
 				len += _putchar(rot13[j]);
 				break;
 			}
-            if (s[i] == ' ')
-                len += _putchar(' ');
+			if (s[i] == ' ')
+				len += _putchar(' ');
 		}
 
 	}
