@@ -6,7 +6,7 @@
  * @base: base to use
  * @c: char
  *
- * Return: the length of the printed number
+ * Return: length of the printed number
  */
 int convert_base(unsigned long n, int base, char c)
 {
