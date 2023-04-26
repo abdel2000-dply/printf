@@ -2,7 +2,7 @@
 
 /**
  * op_reverse - prints a string in reverse
- * @vl: varasic list of arguments
+ * @vl: list of arguments
  * @flag: flag
  *
  * Return: length of the printed chars
