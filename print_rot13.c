@@ -16,7 +16,10 @@ int op_rot13(va_list vl, int flag)
     (void)flag;
 
     if (s == NULL)
-        s = "(AHYY)";
+    {
+        _printf("(AHYY)");
+        return (-1);
+    }
 
     for (i = 0; s[i]; i++)
     {
