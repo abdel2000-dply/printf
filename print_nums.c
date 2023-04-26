@@ -23,7 +23,7 @@ int op_int_helper(long int n)
  * @vl: varasic list of arguments
  * @flag: flag
  *
- * Return: the length of the printed chars
+ * Return: length of the printed chars
  */
 int op_int(va_list vl, int flag)
 {
