@@ -11,9 +11,12 @@ int op_rot13(va_list vl, int flag)
 {
 	int i = 0, j, len = 0;
 	char *s = va_arg(vl, char *);
-	char alph[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rot13[] = " NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	(void) flag;
+
+    if (s == NULL)
+		s = "(AHYY)";
 
 	for (; s[i]; i++)
 	{
