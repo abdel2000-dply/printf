@@ -3,7 +3,7 @@
 /**
  * op_char - prints characters
  * @vl: input
- * @flag: flag
+ * @flag: flag ...
  *
  * Return: length
  */
@@ -38,7 +38,7 @@ int op_string(va_list vl, int flag)
 /**
  * op_percent - prints percentage
  * @vl: input
- * @flag: flag
+ * @flag: flag ...
  *
  * Return: length
  */
