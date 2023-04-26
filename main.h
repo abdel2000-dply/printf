@@ -39,6 +39,8 @@ int op_add(va_list vl, int flag);
 
 int flag_checker(char fmt);
 
+int op_reverse(va_list vl, int flag);
+
 
 
 #endif /* MAIN_H */
