@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * op_rot13 - encodes a string using rot13
+ * op_rot13 - encodes a string to rot13
  * @vl: string to encode
  * @flag: flag
  *
