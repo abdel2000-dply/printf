@@ -20,16 +20,17 @@ int op_rot13(va_list vl, int flag)
 
 	for (; s[i]; i++)
 	{
-		j = 0;
-		for (; alph[j]; j++)
+		for (j = 0; alph[j]; j++)
 		{
 			if (s[i] == alph[j])
 			{
 				len += _putchar(rot13[j]);
 				break;
 			}
+            if (s[i] == ' ')
+                len += _putchar(' ');
 		}
 
 	}
-	return (len - 1);
+	return (len);
 }
