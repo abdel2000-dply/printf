@@ -2,7 +2,7 @@
 
 /**
  * op_int_helper - prints a number
- * @n: integer
+ * @n: integer ...
  *
  * Return: the length of @n
  */
