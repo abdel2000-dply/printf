@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{"u", op_uint},
 		{"S", op_nptbl},
 		{"p", op_add},
+		{"r", op_reverse},
 		{NULL, NULL}
 		};
 
