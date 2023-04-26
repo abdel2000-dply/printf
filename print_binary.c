@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * op_binary_helper - prints prints num on binary base
+ * op_binary_helper - prints prints num on binary ...
  * @n: integer
  *
  * Return: the length of @n
