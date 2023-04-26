@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * op_add - prints a pointer's address
+ * op_add - prints a pointer's adds
  * @vl: input
  * @flag: flag
  * Return: the length
