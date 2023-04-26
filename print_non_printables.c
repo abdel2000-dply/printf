@@ -2,7 +2,7 @@
 /**
  * op_nptbl - prints non printable chars in a string
  * @vl: input
- * @flag: flag
+ * @flag: flag ...
  *
  * Return: length
  */
