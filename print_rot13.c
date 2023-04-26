@@ -15,9 +15,9 @@ int op_rot13(va_list vl, int flag)
 	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	(void) flag;
 
-    if (str == NULL)
-		str = "(AHYY)";
-        
+	if (s == NULL)
+		s = "(AHYY)";
+
 	for (; s[i]; i++)
 	{
 		j = 0;
