@@ -41,6 +41,7 @@ int flag_checker(char fmt);
 
 int op_reverse(va_list vl, int flag);
 
+int op_rot13(va_list vl, int flag);
 
 
 #endif /* MAIN_H */
