@@ -50,7 +50,7 @@ int op_int(va_list vl, int flag)
 /**
  * op_uint - prints an unsigned integer
  * @vl: varasic list of arguments
- * @flag: flag
+ * @flag: flag ...
  *
  * Return: length of the printed chars
  */
