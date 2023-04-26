@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot13 - encodes a string using rot13
+ * op_rot13 - encodes a string using rot13
  * @vl: string to encode
  * @flag: ...
  *
@@ -10,10 +10,10 @@
 int op_rot13(va_list vl, int flag)
 {
 	int i = 0, j;
-    char *s = va_arg(vl, char *);
+	char *s = va_arg(vl, char *);
 	char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-    (void) flag;
+	(void) flag;
 
     if (str == NULL)
 		str = "(AHYY)";
