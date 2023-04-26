@@ -15,7 +15,7 @@ int op_char(va_list vl, int flag)
 	return (1);
 }
 /**
- * op_string - prints strings
+ * op_string - prints a strings
  * @vl: input
  * @flag: flag
  *
@@ -36,7 +36,7 @@ int op_string(va_list vl, int flag)
 	return (i);
 }
 /**
- * op_percent - prints percentage
+ * op_percent - prints a percentage
  * @vl: input
  * @flag: flag ...
  *
