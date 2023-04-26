@@ -3,7 +3,7 @@
 /**
  * op_rot13 - encodes a string using rot13
  * @vl: string to encode
- * @flag: ...
+ * @flag: flag
  *
  * Return: the length of printed string
  */
