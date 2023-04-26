@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * op_nptbl - prints non printable chars in a string
+ * op_nptbl - prints non printable chars in a str
  * @vl: input
  * @flag: flag
  *
