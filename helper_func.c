@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * helper_func - ...
- * @format: ...
- * @vl: ...
- * @f_list: ...
- * Return: ...
+ * helper_func - take of what to print
+ * @format: string
+ * @vl: list of arguments
+ * @f_list: list of conversion specifiers
+ * 
+ * Return: length of what was printed
  */
 int helper_func(const char *format, va_list vl, fun *f_list)
 {
