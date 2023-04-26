@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 		{"S", op_nptbl},
 		{"p", op_add},
 		{"r", op_reverse},
+		{"R", op_rot13},
 		{NULL, NULL}
 		};
 
