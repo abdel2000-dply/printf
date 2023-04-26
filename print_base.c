@@ -72,7 +72,7 @@ int op_hex(va_list vl, int flag)
  * @vl: varasic list of arguments
  * @flag: flag
  *
- * Return: the length of the argument
+ * Return: length of the argument
  */
 int op_heX(va_list vl, int flag)
 {
