@@ -2,9 +2,9 @@
 /**
  * op_nptbl - prints non printable chars in a str
  * @vl: input
- * @flag: flag
+ * @flag: flag ...
  *
- * Return: ...
+ * Return: length
  */
 int op_nptbl(va_list vl, int flag)
 {

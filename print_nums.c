@@ -4,7 +4,7 @@
  * op_int_helper - prints a number
  * @n: integer ...
  *
- * Return: the length of @n
+ * Return: length of @n
  */
 int op_int_helper(long int n)
 {
@@ -23,7 +23,7 @@ int op_int_helper(long int n)
  * @vl: varasic list of arguments
  * @flag: flag
  *
- * Return: the length of the printed chars
+ * Return: length of the printed chars
  */
 int op_int(va_list vl, int flag)
 {
@@ -50,9 +50,9 @@ int op_int(va_list vl, int flag)
 /**
  * op_uint - prints an unsigned integer
  * @vl: varasic list of arguments
- * @flag: flag
+ * @flag: flag ...
  *
- * Return: the length of the printed chars
+ * Return: length of the printed chars
  */
 int op_uint(va_list vl, int flag)
 {
