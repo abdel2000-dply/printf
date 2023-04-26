@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * op_reverse - prints a string in reverse
+ * op_reverse - prints reverse of a string
  * @vl: varasic list of arguments
  * @flag: flag
  *
