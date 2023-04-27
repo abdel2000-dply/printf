@@ -29,10 +29,10 @@ int op_int(va_list vl, int flag)
 {
 	int len = 0;
 	long int n = va_arg(vl, long int);
-	short x;
+	int x = n;
 
-	if (flag == 5)
-		x = n, n = x;
+	if (flag == 5 || x < 0)
+		n = x;
 
 	if (flag == 1 && n > 0)
 		len += _putchar('+');
