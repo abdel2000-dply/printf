@@ -57,7 +57,7 @@ int op_int(va_list vl, int flag)
 int op_uint(va_list vl, int flag)
 {
 	long int n = va_arg(vl, long int);
-	short x;
+	int x;
 
 	if (flag == 5)
 		x = n, n = x;
