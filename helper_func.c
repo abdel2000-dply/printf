@@ -4,7 +4,7 @@
  * @format: string
  * @vl: list of arguments
  * @f_list: list of conversion specifiers
- * 
+ *
  * Return: length of what was printed
  */
 int helper_func(const char *format, va_list vl, fun *f_list)
