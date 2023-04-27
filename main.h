@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 /**
- * struct func - struct that holds the conversion specifier 
+ * struct func - struct that holds the conversion specifier
  * @fmt: convention code
  * @fo_fun: function pointer
  */
