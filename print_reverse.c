@@ -9,13 +9,18 @@
  */
 int op_reverse(va_list vl, int flag)
 {
-	
 	char *str = va_arg(vl, char *);
-	(void) flag;
+	(void)flag;
 
 	return (rev(str));
 }
 
+/**
+ * rev - prints string in reverse
+ * @str: string
+ * 
+ * Return: len
+*/
 int rev(char *str)
 {
 	int i = 0, len = 0;
