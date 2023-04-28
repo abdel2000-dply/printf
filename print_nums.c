@@ -34,7 +34,7 @@ int op_int(va_list vl, int flag)
 	if (flag == 5 || x < 0)
 		n = x;
 
-	if (flag == 1 && n > 0)
+	if (flag == 1 && n >= 0)
 		len += _putchar('+');
 	if (flag == 2 && n > 0)
 		len += _putchar(' ');
