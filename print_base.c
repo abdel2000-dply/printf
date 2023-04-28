@@ -34,7 +34,7 @@ int op_octal(va_list vl, int flag)
 {
 	int len = 0;
 	unsigned int n = va_arg(vl, unsigned int);
-	short x;
+	int x;
 
 	if (flag == 5)
 		x = n, n = x;
@@ -56,7 +56,7 @@ int op_hex(va_list vl, int flag)
 {
 	int len = 0;
 	unsigned int n = va_arg(vl, unsigned int);
-	short x;
+	int x;
 
 	if (flag == 5)
 		x = n, n = x;
@@ -78,7 +78,7 @@ int op_heX(va_list vl, int flag)
 {
 	int len = 0;
 	unsigned int n = va_arg(vl, unsigned int);
-	short x;
+	int x;
 
 	if (flag == 5)
 		x = n, n = x;
