@@ -18,7 +18,7 @@ int op_reverse(va_list vl, int flag)
 /**
  * rev - prints string in reverse
  * @str: string
- * 
+ *
  * Return: len
 */
 int rev(char *str)
