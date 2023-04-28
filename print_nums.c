@@ -6,7 +6,7 @@
  *
  * Return: length of @n
  */
-int op_int_helper(int n)
+int op_int_helper(long int n)
 {
 	unsigned int x = n;
 	int len = 0;
@@ -57,7 +57,7 @@ int op_int(va_list vl, int flag)
  */
 int op_uint(va_list vl, int flag)
 {
-	long int n = va_arg(vl, long int);
+	unsigned int n = va_arg(vl, unsigned int);
 	int x;
 
 	if (flag == 5)
