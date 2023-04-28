@@ -6,14 +6,21 @@
  *
  * Return: length of @n
  */
-int op_int_helper(long int n)
+int op_int_helper(int n)
 {
+	unsigned int x = n;
 	int len = 0;
 
-	if (n / 10)
-		len += op_int_helper(n / 10);
+	if (n < 0)
+	{
+		len += _putchar('-');
+		x = -n;
+	}
 
-	len += _putchar((n % 10) + '0');
+	if (x / 10)
+		len += op_int_helper(x / 10);
+
+	len += _putchar((x % 10) + '0');
 
 	return (len);
 }
@@ -28,21 +35,15 @@ int op_int_helper(long int n)
 int op_int(va_list vl, int flag)
 {
 	int len = 0;
-	long int n = va_arg(vl, long int);
+	int n = va_arg(vl, int);
 	int x = n;
 
 	if (flag == 5 || x < 0)
 		n = x;
-
 	if (flag == 1 && n >= 0)
 		len += _putchar('+');
 	if (flag == 2 && n > 0)
 		len += _putchar(' ');
-	if (n < 0)
-	{
-		len += _putchar('-');
-		n = -n;
-	}
 
 	return (len + op_int_helper(n));
 }
