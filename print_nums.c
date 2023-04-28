@@ -41,7 +41,7 @@ int op_int(va_list vl, int flag)
 		n = -n, x = n;
 	}
 
-	if (flag == 5 || x < 0)
+	if (flag == 5)
 		n = x;
 	if (flag == 1 && n >= 0)
 		len += _putchar('+');
@@ -64,8 +64,9 @@ int op_uint(va_list vl, int flag)
 {
 	unsigned long n = va_arg(vl, unsigned long);
 	unsigned long x = n;
-	int i = 0, len = 0, a;
+	int i = 0, len = 0;
 	char *str;
+	(void) flag;
 
 	for (; n > 0; i++)
 		n /= 10;
