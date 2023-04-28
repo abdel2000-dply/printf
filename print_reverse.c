@@ -9,9 +9,16 @@
  */
 int op_reverse(va_list vl, int flag)
 {
-	int i = 0, len = 0;
+	
 	char *str = va_arg(vl, char *);
 	(void) flag;
+
+	return (rev(str));
+}
+
+int rev(char *str)
+{
+	int i = 0, len = 0;
 
 	if (str == NULL)
 		str = "(NULL)";
