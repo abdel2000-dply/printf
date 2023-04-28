@@ -21,10 +21,8 @@ int op_nptbl(va_list vl, int flag)
 			len += (str[i] < 16) ? _printf("\\x0") : _printf("\\x");
 			len += convert_base(str[i], 16, 55);
 			i++;
+			continue;
 		}
-		if (!str[i])
-			return (len);
-
 		len += _putchar(str[i]);
 		i++;
 	}
