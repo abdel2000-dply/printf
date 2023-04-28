@@ -1,25 +1,20 @@
 #include "main.h"
 
 /**
- * op_int_helper - prints a number
+ * op_long_helper - prints a number
  * @n: integer to print
  *
  * Return: length of @n
  */
-int op_int_helper(long int n)
+int op_long_helper(long n)
 {
+	unsigned long x = n;
 	int len = 0;
 
-	if (n < 0)
-	{
-		len += _putchar('-');
-		n = -n;
-	}
+	if (x / 10)
+		len += op_long_helper(x / 10);
 
-	if (n / 10)
-		len += op_int_helper(n / 10);
-
-	len += _putchar((n % 10) + '0');
+	len += _putchar((x % 10) + '0');
 
 	return (len);
 }
@@ -34,8 +29,17 @@ int op_int_helper(long int n)
 int op_int(va_list vl, int flag)
 {
 	int len = 0;
-	long int n = va_arg(vl, long int);
-	int x = n;
+	long n;
+	unsigned int x;
+
+	n = (flag == 4) ? va_arg(vl, unsigned long) : va_arg(vl, int);
+	x = n;
+
+	if (n < 0)
+	{
+		len += _putchar('-');
+		n = -n, x = n;
+	}
 
 	if (flag == 5 || x < 0)
 		n = x;
@@ -44,7 +48,9 @@ int op_int(va_list vl, int flag)
 	if (flag == 2 && n >= 0)
 		len += _putchar(' ');
 
-	return (len + op_int_helper(n));
+	len += op_long_helper(n);
+
+	return (len);
 }
 
 /**
@@ -56,13 +62,23 @@ int op_int(va_list vl, int flag)
  */
 int op_uint(va_list vl, int flag)
 {
-	unsigned int n = va_arg(vl, unsigned int);
-	int x;
+	unsigned long n = va_arg(vl, unsigned long);
+	unsigned long x = n;
+	int i = 0, len = 0, a;
+	char *str;
 
-	if (flag == 5)
-		x = n, n = x;
+	for (; n > 0; i++)
+		n /= 10;
 
-	return (op_int_helper(n));
+	str = malloc(sizeof(char) * i + 1);
+
+	for (i = 0; x > 0; i++)
+	{
+		str[i] = (x % 10) + '0';
+		x /= 10;
+	}
+	str[++i] = '\0';
+	len = rev(str);
+	free(str);
+	return (len);
 }
-
-
