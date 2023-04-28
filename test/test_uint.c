@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include "main.h"
+#include "../main.h"
 
 int main()
 {
@@ -9,7 +9,7 @@ int main()
     int len, len2;
 
     /*===== %lu %hu LONG/SHORT UNSIGNED =====*/
-    printf("===== %%lu %%hu LONG/SHORT UNSIGNED =====");
+    printf("===== %%lu %%hu LONG/SHORT UNSIGNED =====\n");
 	len = _printf("%lu\n", ULONG_MAX);
 	len2 = printf("%lu\n", ULONG_MAX);
 	fflush(stdout);

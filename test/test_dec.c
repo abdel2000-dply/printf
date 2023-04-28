@@ -1,11 +1,14 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include "../main.h"
 
 
 int main()
 {
     int a, b;
 
-    printf("===== %%d DECEMAL NUMBERS=====")
+    printf("===== %%d DECEMAL NUMBERS=====\n");
 	a = printf("%d\n", 1024);
 	b = _printf("%d\n", 1024);
 	printf("results = %d\n", a==b);
