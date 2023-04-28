@@ -62,11 +62,20 @@ int op_int(va_list vl, int flag)
  */
 int op_uint(va_list vl, int flag)
 {
-	unsigned long n = va_arg(vl, unsigned long);
-	unsigned long x = n;
+	unsigned long n;
+	unsigned long x;
 	int i = 0, len = 0;
 	char *str;
 	(void) flag;
+
+	n = (flag == 4) ? va_arg(vl, unsigned long) : va_arg(vl, unsigned int);
+	x = n;
+	
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 
 	for (; n > 0; i++)
 		n /= 10;
