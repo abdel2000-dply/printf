@@ -81,5 +81,6 @@ int op_uint(va_list vl, int flag)
 	str[++i] = '\0';
 	len = rev(str);
 	free(str);
+
 	return (len);
 }
