@@ -42,7 +42,7 @@ int op_int(va_list vl, int flag)
 		n = x;
 	if (flag == 1 && n >= 0)
 		len += _putchar('+');
-	if (flag == 2 && n > 0)
+	if (flag == 2 && n >= 0)
 		len += _putchar(' ');
 
 	return (len + op_int_helper(n));
