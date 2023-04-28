@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdlib.h>
 /**
  * struct func - struct that holds the conversion specifier
  * @fmt: convention code
@@ -39,6 +40,7 @@ int op_add(va_list vl, int flag);
 
 int flag_checker(char fmt);
 
+int rev(char *str);
 int op_reverse(va_list vl, int flag);
 
 int op_rot13(va_list vl, int flag);
