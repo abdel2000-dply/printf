@@ -33,7 +33,7 @@ int convert_base(unsigned long n, int base, char c)
 int op_octal(va_list vl, int flag)
 {
 	int len = 0;
-	long int n = va_arg(vl, long int);
+	unsigned int n = va_arg(vl, unsigned int);
 	short x;
 
 	if (flag == 5)
@@ -55,7 +55,7 @@ int op_octal(va_list vl, int flag)
 int op_hex(va_list vl, int flag)
 {
 	int len = 0;
-	long int n = va_arg(vl, long int);
+	unsigned int n = va_arg(vl, unsigned int);
 	short x;
 
 	if (flag == 5)
@@ -77,7 +77,7 @@ int op_hex(va_list vl, int flag)
 int op_heX(va_list vl, int flag)
 {
 	int len = 0;
-	long int n = va_arg(vl, long int);
+	unsigned int n = va_arg(vl, unsigned int);
 	short x;
 
 	if (flag == 5)
