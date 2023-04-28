@@ -70,7 +70,7 @@ int op_uint(va_list vl, int flag)
 
 	n = (flag == 4) ? va_arg(vl, unsigned long) : va_arg(vl, unsigned int);
 	x = n;
-	
+
 	if (n == 0)
 	{
 		_putchar('0');
@@ -81,6 +81,8 @@ int op_uint(va_list vl, int flag)
 		n /= 10;
 
 	str = malloc(sizeof(char) * i + 1);
+	if (!str)
+		return (-1);
 
 	for (i = 0; x > 0; i++)
 	{
