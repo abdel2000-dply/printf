@@ -39,7 +39,7 @@ int op_octal(va_list vl, int flag)
 	if (flag == 5)
 		x = n, n = x;
 
-	if (flag == 3)
+	if (flag == 3 && n != 0)
 		len += _putchar('0');
 
 	return (len + convert_base(n, 8, '0'));
@@ -61,7 +61,7 @@ int op_hex(va_list vl, int flag)
 	if (flag == 5)
 		x = n, n = x;
 
-	if (flag == 3)
+	if (flag == 3 && n != 0)
 		len += _printf("0x");
 
 	return (len + convert_base(n, 16, 87));
@@ -83,7 +83,7 @@ int op_heX(va_list vl, int flag)
 	if (flag == 5)
 		x = n, n = x;
 
-	if (flag == 3)
+	if (flag == 3 && n != 0)
 		len += _printf("0X");
 
 	return (len + convert_base(n, 16, 55));
