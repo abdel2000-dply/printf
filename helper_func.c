@@ -37,7 +37,12 @@ int helper_func(const char *format, va_list vl, fun *f_list)
 				}
 			}
 			if (!f_list[j].fmt)
-				len += _printf("%c%c", format[i - 1], format[i]);
+			{
+				if (flag != 0 && format[i] == '\n')
+					len += _printf("%%\n");
+				else
+					len += _printf("%c%c", format[i - 1], format[i]);
+			}
 		}
 		else
 			len += _putchar(format[i]);
