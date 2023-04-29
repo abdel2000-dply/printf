@@ -35,11 +35,6 @@ int op_int(va_list vl, int flag)
 	n = (flag == 4) ? va_arg(vl, unsigned long) : va_arg(vl, int);
 	x = n;
 
-	if (n < 0)
-	{
-		len += _putchar('-');
-		n = -n, x = n;
-	}
 
 	if (flag == 5)
 		n = x;
@@ -47,6 +42,11 @@ int op_int(va_list vl, int flag)
 		len += _putchar('+');
 	if (flag == 2 && n >= 0)
 		len += _putchar(' ');
+	if (n < 0)
+	{
+		len += _putchar('-');
+		n = -n, x = n;
+	}
 
 	len += op_long_helper(n);
 
