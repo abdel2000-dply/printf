@@ -38,7 +38,7 @@ int op_octal(va_list vl, int flag)
 
 	n = (flag == 4) ? va_arg(vl, unsigned long) : va_arg(vl, unsigned int);
 
-	if (flag == 5 && n < 0)
+	if (flag == 5)
 		x = n, n = x;
 
 	if (flag == 3 && n != 0)
