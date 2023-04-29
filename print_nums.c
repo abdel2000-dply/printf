@@ -28,16 +28,16 @@ int op_long_helper(long n)
  */
 int op_int(va_list vl, int flag)
 {
-	int len = 0;
+	int len = 0, y;
 	long n;
 	unsigned int x;
 
 	n = (flag == 4) ? va_arg(vl, unsigned long) : va_arg(vl, int);
 	x = n;
-
+	y = n;
 
 	if (flag == 5)
-		n = x;
+		n = y;
 	if (flag == 1 && n >= 0)
 		len += _putchar('+');
 	if (flag == 2 && n >= 0)
